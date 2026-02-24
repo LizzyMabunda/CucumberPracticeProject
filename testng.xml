@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Cucumber Suite" verbose="1">
+
+    <test name="SignUp Test">
+        <classes>
+            <class name="runners.SignUpRunner"/>
+        </classes>
+    </test>
+
+    <test name="Login Test">
+        <classes>
+            <class name="runners.LoginRunner"/>
+        </classes>
+    </test>
+
+    <test name="AdminPanel Test">
+        <classes>
+            <class name="runners.AdminPanelRunner"/>
+        </classes>
+    </test>
+
+</suite>
