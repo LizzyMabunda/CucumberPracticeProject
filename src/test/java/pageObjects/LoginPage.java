@@ -19,16 +19,20 @@ public class LoginPage {
     WebElement verifyLoginIsSuccessfullyXpath;
 
 
-    public LoginPage(WebDriver driver) {this.driver = driver;}
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void enterUsername(String username) {
         new WebDriverWait(driver, java.time.Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(usernameFieldId));
         usernameFieldId.clear();
         usernameFieldId.sendKeys(username);
     }
+
     public void enterPassword(String password) {
         passwordFieldId.sendKeys(password);
     }
+
     public void clickLoginButton() {
         loginButtonId.click();
     }
@@ -37,8 +41,6 @@ public class LoginPage {
         new WebDriverWait(driver, java.time.Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(verifyLoginIsSuccessfullyXpath));
         return verifyLoginIsSuccessfullyXpath.getText();
     }
-
-
 
 
 }

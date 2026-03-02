@@ -11,5 +11,8 @@ public class Hooks {
 
         Base.initializeBrowser();   // opens browser once per scenario
     }
+    @After
+    public void tearDown() {
 
+    }
 }

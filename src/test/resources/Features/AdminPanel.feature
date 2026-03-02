@@ -6,7 +6,23 @@ Feature: Admin panel tests
     When I login as admin
 
   Scenario: Admin approve pending user
-    Given I am logged in as an admin
-    When I navigate to the pending users section
+    When I navigate to Admin panel page
+    And I navigate to the pending users section
     And I approve a pending user
-    Then the successful pop-up message should be displayed
+    And the successful pop-up message should be displayed
+    And I navigate back to main page
+    Then I log-out
+
+  Scenario: Make registered user an admin
+    When I navigate to Admin panel page
+    And I navigate to the user management section
+    And I make the user an admin
+    And the successful pop-up message should be displayed for role change
+    And I navigate back to main page
+    And I log-out
+
+    When I Login as new admin
+    When I navigate to Admin panel page
+
+
+
